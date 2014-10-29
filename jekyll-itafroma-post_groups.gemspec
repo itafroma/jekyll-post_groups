@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'jekyll-itafroma-post_groups'
-  s.version     = '0.1.0'
-  s.date        = '2014-01-08'
+  s.version     = '0.2.0'
+  s.date        = '2014-10-29'
   s.summary     = 'Jekyll plugin to group posts by arbitrary front-matter keys.'
   s.description = 'Jekyll plugin to group posts by arbitrary front-matter keys.'
   s.authors     = ['Mark Trapp']

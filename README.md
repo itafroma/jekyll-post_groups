@@ -25,14 +25,14 @@ This plugin is configured using a sequence of mappings named `post_groups`:
 ```yaml
 post_groups:
     - key: section
-      key_plural: sections
+      group: sections
       exclude: ['Philosophy']
 ```
 
 Each mapping has the following keys:
 
 * **key:** *(required)* The name of the front-matter key to group on.
-* **key_plural:** *(optional)* The pluralized form of `key`. Used to name the `site.*` variable (e.g., `site.sections` for the front-matter key `section`). If `key_plural` is not specified, `key` will be used instead.
+* **group:** *(required)* Used to name the `site.*` variable (e.g., `site.sections` for the front-matter key `section`). *Note:* this cannot be the same name as a built-in Jekyll variable.
 * **exclude:** *(optional)* A sequence of values that should be excluded from the grouping. In the example above, posts keyed with `section: Philosophy` will be excluded from `site.sections`.
 
 ## Usage

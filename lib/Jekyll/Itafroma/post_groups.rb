@@ -10,10 +10,10 @@ module Jekyll
     class PostGroupsGenerator < Jekyll::Generator
       def generate(site)
         site.config['post_groups'].each do |group|
-          key = group['key']
-          key_plural = group['key_plural'] || group['key']
+          post_key = group['key']
+          collection = group['group']
           exclude = group['exclude'] || []
-          site.config[key_plural] = post_key_hash(site, key, exclude)
+          site.config[collection] = post_key_hash(site, post_key, exclude)
         end
       end
 
