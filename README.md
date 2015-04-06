@@ -63,6 +63,6 @@ available via the MIT license. A copy of the license can be found in the
 * [Canonical project page][2]
 * [RubyGems project page][3]
 
-[1]: http://marktrapp.com "Mark Trapp’s website"
-[2]: http://marktrapp.com/projects/jekyll-post-groups "Jekyll Indentation Filter project page"
+[1]: https://marktrapp.com "Mark Trapp’s website"
+[2]: https://marktrapp.com/projects/jekyll-post-groups "Jekyll Indentation Filter project page"
 [3]: https://rubygems.org/gems/jekyll-itafroma-post_groups "RubyGems project page"

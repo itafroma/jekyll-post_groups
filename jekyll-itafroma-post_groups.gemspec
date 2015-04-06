@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.authors     = ['Mark Trapp']
   s.email       = 'mark@marktrapp.com'
   s.files       = ['lib/jekyll/itafroma/post_groups.rb']
-  s.homepage    = 'http://marktrapp.com/projects/jekyll-post-groups'
+  s.homepage    = 'https://marktrapp.com/projects/jekyll-post-groups'
   s.license     = 'MIT'
 end
