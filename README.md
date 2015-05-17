@@ -37,13 +37,18 @@ Each mapping has the following keys:
 
 ## Usage
 
-Each post group will be within the `site` variable:
+Once defined, you can use your new post groups within templates in the same way that you can use `site.categories` and `site.tags`:
+
+* Each post group will be defined as an array within the `site` variable (e.g. `site.sections`).
+* Each key within that array will be another array containing two elements: the first element is the key value (e.g. "Philosophy") and the second element is an array of posts that are keyed with that value (e.g. every post with `section: Philosophy` in its front matter).
+
+Let's say you wanted to have a new key, `section`, and wanted to display each value in `section` on a page with a list of post titles within each section:
 
 ```liquid
 {% for section in site.sections %}
 <section>
-    <h1>{{ section | first }}</h1>
-    {% for post in section %}
+    <h1>{{ section[0] }}</h1>
+    {% for post in section[1] %}
     <article>
         <h1>{{ post.title }}</h1>
     </article>
