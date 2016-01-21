@@ -5,6 +5,8 @@
 # Copyright: Copyright (c) 2014 Mark Trapp
 # License:: MIT
 
+JEKYLL_MIN_VERSION_3 = Gem::Version.new(Jekyll::VERSION) >= Gem::Version.new('3.0.0') unless defined? JEKYLL_MIN_VERSION_3
+
 module Jekyll
   module Itafroma
     class PostGroupsGenerator < Jekyll::Generator
@@ -24,7 +26,8 @@ module Jekyll
         # Build a hash map based on the specified post attribute ( post attr =>
         # array of posts ) then sort each array in reverse order.
         hash = Hash.new { |hsh, key| hsh[key] = Array.new }
-        site.posts.each do |p|
+        posts = JEKYLL_MIN_VERSION_3 ? site.posts.docs : site.posts
+        posts.each do |p|
           # Skip post if it doesn't have the correct key
           next unless p.data.key? post_key
 
